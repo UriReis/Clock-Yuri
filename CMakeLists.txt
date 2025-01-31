@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(Clock Clock.c pio.c)
+add_executable(Clock Clock.c)
 
 pico_set_program_name(Clock "Clock")
 pico_set_program_version(Clock "0.1")
@@ -58,7 +58,7 @@ target_include_directories(Clock PRIVATE
 target_link_libraries(Clock 
         pico_stdlib
         hardware_timer
-        hardware_pio
+        
         
         )
 
@@ -67,6 +67,4 @@ pico_add_extra_outputs(Clock)
 
 
 
-pico_generate_pio_header(Clock ${CMAKE_CURRENT_LIST_DIR}/ws2812.pio)
-include_directories(${CMAKE_SOURCE_DIR}/include)
 

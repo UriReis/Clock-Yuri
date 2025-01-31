@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/timer.h"
-#include "hardware/pio.h"
-#include "pio.h"
+
+
 
 #define PIN_RED 11
 #define PIN_Y 12
